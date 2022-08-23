@@ -6,9 +6,10 @@ const AuthedLayout = () => {
 	const [profileData, setProfileData] = useState({});
 
 	useEffect(() => {
+		//this loads in the users data such as id, name, etc.
 		const fetchProfileData = async () => {
-			//const data = await fetch("https://yourapi.com");
-			//setProfileData(data.data);
+			const data = await fetch("https://yourapi.com");
+			setProfileData(data.data);
 			setLoaded(true);
 		};
 		fetchProfileData();

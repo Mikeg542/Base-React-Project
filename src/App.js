@@ -7,10 +7,10 @@ const App = ({ children }) => {
 
   useEffect(() => {
     //This function should probably be in a services folder
-    //This will load up the app initially or on refresh with any initial configs/external data
+    //This will load up the app initially or on refresh with any initial configs/external data you want always accessible
     const fetchPublicAppData = async () => {
-      //const data = await fetch("https://yourapi.com");
-      //setData(data.data);
+      const data = await fetch("https://yourapi.com");
+      setData(data.data);
       setLoaded(true);
     };
     fetchPublicAppData();
